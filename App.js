@@ -18,10 +18,12 @@ import {
 } from 'react-native';
 
 import SigninScreen from './src/screens/SigninScreen';
+import SignUpScreen from './src/screens/SignUpScreen';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
+      {/* <SigninScreen /> */}
       <SigninScreen />
     </SafeAreaView>
   );

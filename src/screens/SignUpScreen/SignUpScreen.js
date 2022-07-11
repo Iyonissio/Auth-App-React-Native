@@ -4,7 +4,7 @@ import Logo from '../../../assets/images/logo.png';
 import CustomButtom from '../../components/CustomButtom';
 import CustomInput from '../../components/CustomInput';
 
-const SigninScreen = () => {
+const SignUpScreen = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -103,4 +103,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default SigninScreen
+export default SignUpScreen
