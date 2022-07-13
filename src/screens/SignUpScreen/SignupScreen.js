@@ -16,9 +16,13 @@ const SignupScreen = () => {
     const onSignUpPressed = () => {
         console.warn("Sign Up");
     }
-    
+
     const onSignUpPress = () => {
         console.warn(" onSignUpPress");
+    }
+
+    const onSignInPress = () => {
+        console.warn("Have a Account")
     }
 
     const onForgotPasswordPressed = () => {
@@ -77,8 +81,8 @@ const SignupScreen = () => {
                 <SigninSocialButtons />
                 
                 <CustomButtom
-                    text="Don't have an account? Create One"
-                    onPress={onSignUpPress}
+                    text="Possui uma conta? Entrar"
+                    onPress={onSignInPress}
                     type='TERTIARY'
                 />
             </View>
