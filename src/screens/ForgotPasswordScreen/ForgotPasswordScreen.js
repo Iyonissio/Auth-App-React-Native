@@ -25,7 +25,7 @@ const ForgotPasswordScreen = () => {
                     placeholder="Insira nome de Usuario"
                     value={username}
                     setValue={setUsername} />
-                <CustomButtom text="Confirmar" onPress={onConfirmPressed} />
+                <CustomButtom text="Enviar" onPress={onConfirmPressed} />
 
                 <CustomButtom
                     text="Voltar"
