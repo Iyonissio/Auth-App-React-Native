@@ -35,7 +35,7 @@ const ConfirmEmailScreen = () => {
                 <CustomButtom
                     text="Reenviar o Codigo"
                     onPress={onRessendPressed}
-                    type='TERTIARY'
+                    type='SECONDARY'
                 />
 
                 <CustomButtom

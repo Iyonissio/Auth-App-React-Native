@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import React from 'react'
 
-const CustomButtom = ({ onPress, text, type = "PRIMARY" , bgColor, fgColor}) => {
+const CustomButtom = ({ onPress, text, type = "PRIMARY", bgColor, fgColor }) => {
   return (
     <Pressable
       onPress={onPress}
@@ -13,7 +13,7 @@ const CustomButtom = ({ onPress, text, type = "PRIMARY" , bgColor, fgColor}) => 
       <Text
         style={[styles.text,
         styles[`text_${type}`],
-        fgColor ? {color: fgColor} : {}
+        fgColor ? { color: fgColor } : {}
         ]}>{text}</Text>
     </Pressable>
   )
@@ -32,11 +32,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#3871F3',
   },
 
+  container_SECONDARY: {
+    borderBottomColor: '#3B71F3',
+    borderWidth: 2,
+  },
+
   container_TERTIARY: {},
 
   text: {
     fontWeight: 'bold',
     color: 'white',
+  },
+
+  text_SECONDARY: {
+    color: '#3B71F3',
   },
 
   text_TERTIARY: {
