@@ -22,7 +22,7 @@ const CustomButtom = ({ onPress, text, type = "PRIMARY" , bgColor, fgColor}) => 
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    padding: 15,
+    padding: 12,
     marginVertical: 5,
     alignItems: 'center',
     borderRadius: 5,

@@ -12,8 +12,8 @@ const SignupScreen = () => {
 
     const { height } = useWindowDimensions();
 
-    const onSignInPressed = () => {
-        console.warn("Sign in");
+    const onSignUpPressed = () => {
+        console.warn("Sign Up");
     }
 
     const onSignInFacebook = () => {
@@ -35,6 +35,16 @@ const SignupScreen = () => {
     const onForgotPasswordPressed = () => {
         console.warn("Forgot Password");
     }
+
+    const onTermsOfUsePressed = () => {
+        console.warn("onTermsOfUsePressed");
+    }
+
+    const onPrivacyPressed = () => {
+        console.warn("onPrivacyPressed");
+    }
+
+
 
     return (
         <ScrollView>
@@ -60,7 +70,13 @@ const SignupScreen = () => {
                     setValue={setPasswordRepeat}
                     secureTextEntry
                 />
-                <CustomButtom text="Sign In" onPress={onSignInPressed} />
+                <CustomButtom text="Cadastrar" onPress={onSignUpPressed} />
+
+                <Text style={styles.text}>Ao se registrar, você confirma que aceita nossos{' '}
+                    <Text style={styles.link} onPress={onTermsOfUsePressed}> Termos de uso</Text>  {' '}e{' '}
+                    <Text style={styles.link} onPress={onPrivacyPressed}> Privacidade.</Text>
+                </Text>
+
                 <CustomButtom
                     text="Forgot Password"
                     onPress={onForgotPasswordPressed}
@@ -101,10 +117,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 20,
     },
-    logo: {
-        width: '70%',
-        maxWidth: 300,
-        maxWidth: 200,
+    text: {
+        color: 'gray',
+        marginVertical: 10,
+    },
+    link: {
+        color: '#FDB075',
     },
 
     title: {
@@ -113,8 +131,6 @@ const styles = StyleSheet.create({
         color: '#051C60',
         margin: 10,
     }
-
-
 });
 
 export default SignupScreen
