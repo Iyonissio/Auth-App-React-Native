@@ -3,6 +3,7 @@ import { View, Text, Image, StyleSheet, useWindowDimensions , ScrollView} from '
 import Logo from '../../../assets/images/logo.png';
 import CustomButtom from '../../components/CustomButtom';
 import CustomInput from '../../components/CustomInput';
+import SigninSocialButtons from '../SignInSocialButtons/SigninSocialButtons';
 
 const SigninScreen = () => {
     const [username, setUsername] = useState('');
@@ -13,19 +14,7 @@ const SigninScreen = () => {
     const onSignInPressed = () => {
         console.warn("Sign in");
     }
-
-    const onSignInFacebook = () => {
-        console.warn("Sign in Facebook");
-    }
-
-    const onSignInGoogle = () => {
-        console.warn("Sign in Google");
-    }
-
-    const onSignInApple = () => {
-        console.warn("Sign in Apple");
-    }
-
+    
     const onSignUpPress = () => {
         console.warn(" onSignUpPress");
     }
@@ -58,32 +47,14 @@ const SigninScreen = () => {
                 onPress={onForgotPasswordPressed}
                 type='TERTIARY'
             />
-            <CustomButtom
-                text="Sign In Facebook"
-                onPress={onSignInFacebook}
-                bgColor="#E7EAF4"
-                fgColor="#4765A9"
-            />
-            <CustomButtom
-                text="Sign In Google"
-                onPress={onSignInGoogle}
-                bgColor="#FAE9EA"
-                fgColor="#DD4D44"
-            />
-            <CustomButtom
-                text="Sign In Apple"
-                onPress={onSignInApple}
-                bgColor="#e3e3e3"
-                fgColor="#363636"
-            />
+            
+            <SigninSocialButtons />
 
             <CustomButtom
                 text="Don't have an account? Create One"
                 onPress={onSignUpPress}
                 type='TERTIARY'
             />
-
-
         </View>
 
         </ScrollView>
