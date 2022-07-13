@@ -19,11 +19,13 @@ import {
 
 import SigninScreen from './src/screens/SignInScreen/SigninScreen';
 import SignupScreen from './src/screens/SignUpScreen/SignupScreen';
+import ConfirmEmailScreen from './src/screens/ConfirmEmailScreen';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
-      <SignupScreen />
+      <ConfirmEmailScreen />
+      {/* <SignupScreen /> */}
       {/* <SigninScreen /> */}
     </SafeAreaView>
   );
