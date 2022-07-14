@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView } from '
 import CustomButtom from '../../components/CustomButtom';
 import CustomInput from '../../components/CustomInput';
 import SigninSocialButtons from '../SignInSocialButtons/SigninSocialButtons';
-
+import { useNavigation } from '@react-navigation/native';
 
 const SignupScreen = () => {
     const [username, setUsername] = useState('');
@@ -12,9 +12,11 @@ const SignupScreen = () => {
     const [passwordRepeat, setPasswordRepeat] = useState('');
 
     const { height } = useWindowDimensions();
+    const navigation = useNavigation();
 
     const onSignUpPressed = () => {
         console.warn("Sign Up");
+        navigation.navigate('ConfirmEmail')
     }
 
     const onSignUpPress = () => {
@@ -23,6 +25,7 @@ const SignupScreen = () => {
 
     const onSignInPress = () => {
         console.warn("Have a Account")
+        navigation.navigate('SignIn')
     }
 
     const onForgotPasswordPressed = () => {
@@ -70,7 +73,7 @@ const SignupScreen = () => {
                     <Text style={styles.link} onPress={onPrivacyPressed}> Privacidade.</Text>
                 </Text>
 
-                
+
 
                 <CustomButtom
                     text="Forgot Password"
@@ -79,7 +82,7 @@ const SignupScreen = () => {
                 />
 
                 <SigninSocialButtons />
-                
+
                 <CustomButtom
                     text="Possui uma conta? Entrar"
                     onPress={onSignInPress}
