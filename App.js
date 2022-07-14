@@ -17,15 +17,15 @@ import {
   View,
 } from 'react-native';
 
-import SigninScreen from './src/screens/SignInScreen/SigninScreen';
-import SignupScreen from './src/screens/SignUpScreen/SignupScreen';
-import ConfirmEmailScreen from './src/screens/ConfirmEmailScreen';
-import ForgotPasswordScreen from './src/screens/ForgotPasswordScreen/ForgotPasswordScreen';
+
+import Navigation from './src/navigation/index';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.root}>
-      <ForgotPasswordScreen />
+      <Navigation />
+      {/* <NewPasswordScreen /> */}
+      {/* <ForgotPasswordScreen /> */}
       {/* <ConfirmEmailScreen /> */}
       {/* <SignupScreen /> */}
       {/* <SigninScreen /> */}
