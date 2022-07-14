@@ -27,6 +27,7 @@ const SigninScreen = () => {
 
     const onForgotPasswordPressed = () => {
         console.warn("Forgot Password");
+        navigation.navigate("ForgotPassword")
     }
 
     return (

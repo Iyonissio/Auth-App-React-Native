@@ -2,15 +2,20 @@ import React, { useState } from 'react'
 import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView } from 'react-native'
 import CustomButtom from '../../components/CustomButtom';
 import CustomInput from '../../components/CustomInput';
+import { useNavigation } from '@react-navigation/native';
+
 
 const NewPasswordScreen = () => {
     const [code, setCode] = useState('');
     const [newPassword, setNewPassword] = useState('');
 
     const { height } = useWindowDimensions();
+    const navigation = useNavigation();
+
 
     const onSubmitPressed = () => {
         console.warn('onSubmitPressed')
+        navigation.navigate("SignIn")
     }
 
     const onBackPressed = () => {

@@ -2,15 +2,17 @@ import React, { useState } from 'react'
 import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView } from 'react-native'
 import CustomButtom from '../../components/CustomButtom';
 import CustomInput from '../../components/CustomInput';
+import { useNavigation } from '@react-navigation/native';
 
 const ForgotPasswordScreen = () => {
     const [username, setUsername] = useState('');
 
-
     const { height } = useWindowDimensions();
+    const navigation = useNavigation();
 
     const onConfirmPressed = () => {
         console.warn("onConfirmPressed");
+        navigation.navigate("NewPassword")
     }
 
     const onBackPressed = () => {
