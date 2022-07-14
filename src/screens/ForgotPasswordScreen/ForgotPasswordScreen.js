@@ -17,6 +17,7 @@ const ForgotPasswordScreen = () => {
 
     const onBackPressed = () => {
         console.warn("onBackPressed")
+        navigation.navigate("SignIn")
     }
 
     return (

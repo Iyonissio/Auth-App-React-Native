@@ -20,6 +20,7 @@ const NewPasswordScreen = () => {
 
     const onBackPressed = () => {
         console.warn("onBackPressed")
+        navigation.navigate("ForgotPassword")
     }
 
     return (
