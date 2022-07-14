@@ -73,14 +73,6 @@ const SignupScreen = () => {
                     <Text style={styles.link} onPress={onPrivacyPressed}> Privacidade.</Text>
                 </Text>
 
-
-
-                <CustomButtom
-                    text="Forgot Password"
-                    onPress={onForgotPasswordPressed}
-                    type='TERTIARY'
-                />
-
                 <SigninSocialButtons />
 
                 <CustomButtom
