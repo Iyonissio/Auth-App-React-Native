@@ -4,19 +4,25 @@ import Logo from '../../../assets/images/cumbezalogo.png';
 import CustomButtom from '../../components/CustomButtom';
 import CustomInput from '../../components/CustomInput';
 import SigninSocialButtons from '../SignInSocialButtons/SigninSocialButtons';
+import { useNavigation } from '@react-navigation/native';
+
 
 const SigninScreen = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const { height } = useWindowDimensions();
+    const navigation = useNavigation();
 
     const onSignInPressed = () => {
         console.warn("Sign in");
+        // Validacao de Usuario
+        navigation.navigate('HomeScreen');
     }
 
     const onSignUpPress = () => {
         console.warn(" onSignUpPress");
+        navigation.navigate('SignUp');
     }
 
     const onForgotPasswordPressed = () => {
@@ -68,6 +74,7 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     logo: {
+        padding: 90,
         width: '70%',
         maxWidth: 150,
         maxHeight: 150,
