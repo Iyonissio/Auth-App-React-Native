@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { View, Text, Image, StyleSheet, useWindowDimensions , ScrollView} from 'react-native'
-import Logo from '../../../assets/images/logo.png';
+import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView } from 'react-native'
+import Logo from '../../../assets/images/cumbezalogo.png';
 import CustomButtom from '../../components/CustomButtom';
 import CustomInput from '../../components/CustomInput';
 import SigninSocialButtons from '../SignInSocialButtons/SigninSocialButtons';
@@ -14,7 +14,7 @@ const SigninScreen = () => {
     const onSignInPressed = () => {
         console.warn("Sign in");
     }
-    
+
     const onSignUpPress = () => {
         console.warn(" onSignUpPress");
     }
@@ -26,39 +26,39 @@ const SigninScreen = () => {
     return (
         <ScrollView>
             <View style={styles.root}>
-            <Image
-                source={Logo}
-                style={[styles.logo, { height: height * 0.3 }]}
-                resizeMode="contain"
-            />
-            <CustomInput
-                placeholder="Username"
-                value={username}
-                setValue={setUsername} />
-            <CustomInput
-                placeholder="Password"
-                value={password}
-                setValue={setPassword}
-                secureTextEntry
-            />
-            <CustomButtom text="Sign In" onPress={onSignInPressed} />
-            <CustomButtom
-                text="Forgot Password"
-                onPress={onForgotPasswordPressed}
-                type='TERTIARY'
-            />
-            
-            <SigninSocialButtons />
+                <Image
+                    source={Logo}
+                    style={[styles.logo, { height: height * 0.3 }]}
+                    resizeMode="contain"
+                />
+                <CustomInput
+                    placeholder="Username"
+                    value={username}
+                    setValue={setUsername} />
+                <CustomInput
+                    placeholder="Password"
+                    value={password}
+                    setValue={setPassword}
+                    secureTextEntry
+                />
+                <CustomButtom text="Sign In" onPress={onSignInPressed} />
+                <CustomButtom
+                    text="Forgot Password"
+                    onPress={onForgotPasswordPressed}
+                    type='TERTIARY'
+                />
 
-            <CustomButtom
-                text="Don't have an account? Create One"
-                onPress={onSignUpPress}
-                type='TERTIARY'
-            />
-        </View>
+                <SigninSocialButtons />
+
+                <CustomButtom
+                    text="Não tem uma conta? Crie uma"
+                    onPress={onSignUpPress}
+                    type='TERTIARY'
+                />
+            </View>
 
         </ScrollView>
-        
+
     );
 };
 
@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
     },
     logo: {
         width: '70%',
-        maxWidth: 300,
-        maxWidth: 200,
+        maxWidth: 150,
+        maxHeight: 150,
     }
 });
 
